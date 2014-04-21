@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^$', views.home ,name="home"),
     url(r'^blog/', views.blog ,name="blog"),
     url(r'^contact/', views.contact ,name="contact"),
+    url(r'^email/', views.contact ,name="mail"),
     url(r'^projects/', views.projects ,name="projects"),
     url(r'^(?P<slug>[\w\-]+)/$', views.getpost, name="getpost"),
 )

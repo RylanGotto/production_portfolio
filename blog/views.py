@@ -28,11 +28,11 @@ def contact(request):
                  text_body = form.cleaned_data['message'],
                  tag = "Site email")
 		if message.send():
-			status = "That shit is on its wasy westside"
+			status = "Your message has been delievered!"
 			return render(request, 'email.html', {
 		'status': status,})
 		else:
-			status = "There seems to be a problem with my email service just shoot me and email \@ iamrylangotto@gmail.com"
+			status = "There seems to be a problem with my email service, just shoot me and email at iamrylangotto@gmail.com"
 			render(request, 'email.html', {
 		'form': form,})
 	else:
