@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'b()uab%3$xi7uq1&j2v$-i4%))62n%398%glurs1qokx(muj&s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -95,9 +95,9 @@ TEMPLATE_DIRS = (
 )
 
 
-AWS_ACCESS_KEY_ID = ''
-AWS_SECRET_ACCESS_KEY = ''
-AWS_STORAGE_BUCKET_NAME = ''
+AWS_ACCESS_KEY_ID = 'AKIAJWX3AVRB6VK3WFJQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'gotto-assests'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
@@ -111,12 +111,15 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
+
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
+
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
