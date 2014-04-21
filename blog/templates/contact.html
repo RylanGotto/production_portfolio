@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Contact{% endblock title %}
+
+{% block nav %}
+            <li><a  href="{%url 'home'%}">Home</a></li>
+            <li ><a  href="{%url 'blog'%}">Blog</a></li>
+            <li><a  href="{%url 'projects'%}">Projects</a></li>
+            <li class="active"><a   href="{%url 'contact'%}">Contact</a></li>
+{% endblock nav %}
+
+{% block headline %}
+	<div class="container"> 
+		<h1 style="margin-bottom:35px;">__connect_with_me</h1>
+	</div>
+{% endblock headline %}
+
+
+
+{% block content %}
+
+<div class="container"> 
+	<div class="jumbotron"  >
+	<div class="row">
+		<div class="col-md-12 contact">
+			<div class="row">
+				<div class="col-md-5"><h3><strong>Contact me by email</strong></h3>
+					<p>I am avalible for freelance work, and I would love to hear about your projects.</p>
+					<p>Feel free to contact me at iamrylangotto@gmail.com</p>
+					<p>Or feel to contact me here</p>
+				<div id="contact_form">
+					<form action="contact/" method="post">{% csrf_token %}
+				<div class="row">
+					<div class="col-md-5">
+						{{form.as_p}}
+					</div>
+
+				</div>
+				<input id="submit" style="color:white;" class="btn btn-primary"type="submit" value="Submit" />
+				</form>
+				</div>
+				</div>
+
+				<div class="col-md-2"></div>
+				<div class="col-md-5" ><h3 style="margin-left:45px;"><strong>Contact me on the web</strong></h3>
+					<ul id="social">
+						<li><a href="//github.com/RylanGotto"><img src="{% static 'images/icons/Github.png' %}"/><strong>Github</strong></a></li>
+						<li><a href="//twitter.com/Gottoii"><img src="{% static 'images/icons/Twitter.png' %}"/><strong>Twitter</strong></a></li></a>
+						<li><a href="//ca.linkedin.com/pub/rylan-gotto/84/6b/224"><img src="{% static 'images/icons/Linkedin.png' %}"/><strong>Linkedin</strong></a></li>
+						<li><a href="//www.youtube.com/channel/UCdCl7DS3tQcLQbfCmMzW6fA"><img src="{% static 'images/icons/Youtube.png' %}"/><strong>Youtube</strong></a></li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="row">
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+		
+</div>
+</div>
+{% endblock content %}
+
+
